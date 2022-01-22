@@ -1,0 +1,160 @@
+@media screen and (max-width: 1200px) {
+	.container{
+		width: 1090px;
+	}
+	.rps-dnone{
+		display: none !important;
+	}
+	.btn-menu{
+		display: inline;
+	}
+	.home-fea-left{
+		display: none;
+	}
+	.home-fea-right{
+		width: 100%;
+		margin-left: 0px;
+	}
+	.home-fea-slider{
+		margin-left: 0px;
+	}
+	.home-fea-left-add-hover{
+		overflow-y: auto;
+	}
+}
+@media screen and (max-width: 1100px) {
+	.container{
+		width: 720px;
+	}
+	.logo{
+		margin-left: calc((100% - 175px) / 2);
+	}
+	.logo a{
+		display: block;
+		width: 100%;
+	}
+	.logo a img{
+		max-width: 100%;
+		margin: 0 auto;
+	}
+	.header-right{
+		position: absolute;
+		top: 0px;
+		right: 0px;
+	}
+	.search-trenpc{
+		display: none;
+	}
+	.header-ct-item:nth-child(1){
+		display: none;
+	}
+	.home-fea-banner{
+		display: none;
+	}
+	.slider-nav{
+		width: 100%;
+	}
+	.home-fea-slider{
+		width: 100%;
+	}
+	.block-item-nav li{
+		margin-top: 10px;
+	}
+	.pro-item{
+		width: calc((100% - 20px) / 3);
+		margin-right: 10px;
+	}
+	.pro-item:nth-child(n+4){
+		float: left;
+		margin-right: 10px;
+		margin-top: 10px;
+	}
+	.pro-item:nth-child(3n+3){
+		float: right;
+		margin-right: 0px;
+	}
+	.item-thuong-hieu-thumb{
+		height: 80px;
+	}
+	.search-rps{
+		display: block !important;
+	}
+	.search-form{
+		width: 100%;
+		margin: 0;
+		margin-top: 10px;
+	}
+	.search-input{
+		border: 1px solid#d8d8d8;
+	}
+	.search-submit{
+		right: 10px !important;
+		top: 0px;
+		left: inherit;
+		background: none;
+	}
+	.home-fea{
+		margin-top: 60px;
+	}
+}
+@media screen and (max-width: 730px) {
+	.container{
+		width: 480px;
+	}
+	.logo {
+		margin-left: calc(50% / 2);
+	}
+	.home-slider-item{
+		height: 190px;
+		border-radius: 10px;
+	}
+	.slider-nav{
+		display: none;
+	}
+	.pro-item {
+		width: calc((100% - 20px) / 2);
+		margin-right: 10px;
+	}
+	.pro-item:nth-child(n+3){
+		float: left;
+		margin-right: 10px;
+		margin-top: 10px;
+	}
+	.pro-item:nth-child(2n+2){
+		margin-right: 0px;
+		float: right;
+	}
+	.item-thuong-hieu{
+		width: calc((100% - 15px) / 2);
+		margin-right: 15px;
+	}
+	.item-thuong-hieu:nth-child(2n+2){
+		float: right;
+		margin-right: 0px;
+	}
+	.item-thuong-hieu:nth-child(n+3){
+		margin-top: 15px;
+	}
+	.item-thuong-hieu-thumb {
+	    height: 100px;
+	}
+	.footer-item{
+		width: 100%;
+		margin-right: 0px;
+	}
+}
+@media screen and (max-width: 480px) {
+	.container{
+		width: 96%;
+	}
+	.logo {
+    margin-left: calc(40% / 2);
+}
+@media screen and (max-width: 375) {
+	.container{
+		width: 96%;
+	}
+	.logo {
+    margin-left: calc(31% / 2);
+}
+	

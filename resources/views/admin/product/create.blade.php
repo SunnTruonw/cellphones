@@ -59,6 +59,17 @@
                             </div>
                         </div>
 
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Thương hiệu sản phẩm</label>
+                            <select name="brand_id" class="custom-select">
+                                    @foreach($brands as $key => $brand)
+                                        @if($brand->parent_id == 0)
+                                            <option value="{{$brand->id}}">{{$brand->name}}</option>
+                                        @endif
+                                    @endforeach
+                            </select>
+                        </div> 
+
                         <div class="form-group ">
                             <label for="menu">Ảnh sản phẩm</label>
                             <input type="file" class="form-control" id="upload">
@@ -94,6 +105,11 @@
                             <textarea type="text" class="form-control"  value="{{old('content')}}" name="content" id="exampleInputEmail1" aria-describedby="emailHelp"></textarea>
                         </div>
 
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Đánh giá</label>
+                            <textarea type="text" class="form-control"  value="{{old('review_content')}}" name="review_content" id="exampleInputEmail1" aria-describedby="emailHelp"></textarea>
+                        </div>
+
                         
 
                         <div class="form-group">
@@ -108,6 +124,10 @@
                             </div>
                         </div>
                       
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Nhãn</label>
+                            <input type="text" class="form-control" value="{{old('tag')}}" name="tag"   aria-describedby="emailHelp" placeholder="Nhập tên..">
+                        </div>
 
                         
 

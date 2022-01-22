@@ -1,0 +1,24 @@
+<!-- <div class="featured">
+    <div class="owl-carousel owl-featured owl-theme">
+        <?php
+        $content = get_field('banner_header', 'option');
+        if(!empty($content) && count($content) > 0): foreach ($content as $val) : ?>
+            <a class="featured-item thumb-cover" href="<?php echo $val['link'];?>" target="_blank">
+                <img src="<?php echo $val['img'];?>">
+            </a>
+        <?php endforeach; endif; ?>
+    </div>   
+</div>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(".owl-featured").owlCarousel({
+            autoplay: true,
+            slideSpeed : 4000,
+            autoplayTimeout:4000,
+            items : 1,
+            nav:true,
+            loop:true,
+            singleItem : true,
+        });
+    });
+</script> -->

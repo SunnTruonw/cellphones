@@ -60,6 +60,17 @@
                             </div>
                         </div>
 
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Thương hiệu sản phẩm</label>
+                            <select name="brand_id" class="custom-select">
+                                    @foreach($brands as $key => $brand)
+                                        @if($brand->parent_id == 0)
+                                            <option {{$product->brand_id == $brand->id ? 'selected' : ''}} value="{{$brand->id}}">{{$brand->name}}</option>
+                                        @endif
+                                    @endforeach
+                            </select>
+                        </div> 
+
                         <div class="form-group ">
                             <label for="menu">Ảnh sản phẩm</label>
                             <input type="file" class="form-control" id="upload">
@@ -94,7 +105,12 @@
 
                         <div class="form-group">
                             <label for="exampleInputEmail1">Nội dung</label>
-                            <textarea type="text" class="form-control"  value="{{old('content')}}" name="content" id="exampleInputEmail1" aria-describedby="emailHelp">{{ $product->content }}</textarea>
+                            <textarea type="text" class="form-control" rows="8" cols="8" value="{{old('content')}}" name="content" id="exampleInputEmail1" aria-describedby="emailHelp">{{ $product->content }}</textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Đánh giá</label>
+                            <textarea type="text" class="form-control" rows="8" cols="8"  value="{{old('review_content')}}" name="review_content" id="exampleInputEmail1" aria-describedby="emailHelp">{{ $product->review_content }}</textarea>
                         </div>
 
                         
@@ -111,7 +127,10 @@
                             </div>
                         </div>
                       
-
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Nhãn</label>
+                            <input type="text" class="form-control" value="{{$product->tag}}" name="tag"   aria-describedby="emailHelp" placeholder="Nhập tên..">
+                        </div>
                         
 
                         <button type="submit" class="btn btn-primary">Cập Nhật</button>

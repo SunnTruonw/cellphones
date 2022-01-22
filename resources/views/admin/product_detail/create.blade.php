@@ -24,17 +24,44 @@
 
     <div class="form-group">
         <label for="exampleInputEmail1">Màu</label>
-        <select name="color" class="custom-select">
-            <option value="0">Chọn màu</option>
-            <option value="#FFD700">Vàng</option>
-            <option value="#696969">Xám</option>
-            <option value="#2F4F4F">Xanh</option>
-            <option value="#FFFAF0">Bạc</option>                                           
-        </select>
+        <div>
+            <input type="checkbox" name="color[Bạc]" value="Bạc"/>
+            <span>
+                 Bạc
+            </span>
+        </div>
+        <div>
+            <input type="checkbox" name="color[Vàng]" value="Vàng"/>
+            <span>
+                 Vàng
+            </span>
+        </div>
+        <div>
+            <input type="checkbox" name="color[Xanh]" value="Xanh"/>
+            <span>
+                 Xanh
+            </span>
+        </div>
+        <div>
+            <input type="checkbox" name="color[Xám]" value="Xám"/>
+            <span>
+                 Xám
+            </span>
+        </div>
+        <div>
+            <input type="checkbox" name="color[Đen]" value="Đen"/>
+            <span>
+                 Đen
+            </span>
+        </div>
+        
     </div>
+
+    
 
     <div class="form-group">
         <label for="exampleInputEmail1">Bộ nhơ trong (Ram)</label>
+        
         <select name="ram" class="custom-select">
             <option value="0">Chọn dung lượng</option>
             <option value="4GB">4GB</option>
@@ -80,3 +107,4 @@
 </div>
 
 @endsection
+

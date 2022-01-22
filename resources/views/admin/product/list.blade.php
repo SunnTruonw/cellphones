@@ -15,11 +15,12 @@
                 <th>Giá Giảm</th>
                 <th>Cửa Hàng</th>
                 <th>Danh mục</th>
+                <th>Thương hiệu</th>
                 <th>Số lượng</th>
                 <th>Mã Sản phẩm</th>
-                <th>Mô tả</th>
                 <th>Hình ảnh</th>
                 <th>Nổi bật</th>
+                <th>Nhãn</th>
                 <th>Cập Nhật</th>
                 <th style="width: 100px">&nbsp;</th>
          
@@ -39,16 +40,20 @@
             @if(isset($product->store->city))
                 <td>{{ $product->store->city }}</td>
             @else
-                <td>Đang cập nhật...</td>
+                <td>Chưa thêm...</td>
             @endif
             @if(isset($product->category->name))
                 <td>{{ $product->category->name }}</td>
             @else
-                <td>Đang cập nhật...</td>
+                <td>Chưa thêm...</td>
+            @endif
+            @if(isset($product->brand->name))
+                <td>{{ $product->brand->name }}</td>
+            @else
+                <td>Chưa thêm...</td>
             @endif
             <td>{{ $product->qty }}</td>
             <td>{{ $product->sku }}</td>
-            <td>{{ $product->description }}</td>
             <td>
                 <a href="{{ $product->image }}" target="_blank" rel="noopener noreferrer">
                     <img src="{{ $product->image }}" alt="{{ $product->name }}" width="100px">
@@ -56,7 +61,7 @@
             </td>
             <td>{!! $product->active == 1 ? '<span class="btn btn-success btn-sm">True</span>' 
                 : '<span class="btn btn-danger btn-sm">No</span>' !!}</td>
-            
+            <td>{{$product->tag}}</td>
             
             
             <td>{{ $product->updated_at }}</td>

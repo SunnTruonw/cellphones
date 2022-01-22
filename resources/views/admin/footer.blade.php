@@ -48,3 +48,38 @@
     }
 </script>
 
+
+<script>
+    let filesAmount = [];
+    function removeImage(i) {
+        const fileListArr = Array.from(filesAmount);
+        fileListArr.splice(i);
+        filesAmount = fileListArr;
+        $('.preview-images').find('.img-item').eq(i).remove();
+        $('.images-input').files = fileListArr;
+    }
+    const imagesPreview = function (input, placeToInsertImagePreview) {
+        if (input.files) {
+            filesAmount = input.files;
+            $('.preview-images').empty();
+            for (let i = 0; i < filesAmount.length; i++) {
+                const reader = new FileReader();
+                reader.onload = function (event) {
+                    const node = document.createElement('span');
+                    node.addEventListener('click', () => {
+                        removeImage(i);
+                    })
+                    node.style.position = 'relative';
+                    node.classList.add('img-item');
+                    node.innerHTML = `<img src="${event.target.result}" alt="Image" style="width:150px;height:100px;"><span class="remove-img">
+<div>x</div></span>`;
+                    $(placeToInsertImagePreview).append(node);
+                }
+                reader.readAsDataURL(input.files[i]);
+            }
+        }
+    };
+    $('.images-input').on('change', function () {
+        imagesPreview(this, '.preview-images');
+    });
+</script>

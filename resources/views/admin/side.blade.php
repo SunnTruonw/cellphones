@@ -62,7 +62,26 @@
 
           <li class="nav-item">
             <a href="" class="nav-link">
-            <i class="fas fa-circle"></i>
+            <i class="nav-icon fas fa-bars"></i>
+              <p>
+                Thương hiệu
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{route('brand.create')}}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Thêm thương hiệu</p>
+                </a>
+              </li>
+             
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a href="" class="nav-link">
+              <i class="nav-icon far fa-calendar-alt"></i>
 
               <p>
                 Quản lý cửa hàng
@@ -88,7 +107,7 @@
 
           <li class="nav-item">
             <a href="" class="nav-link">
-            <i class="fas fa-long-arrow-alt-right"></i>
+              <i class="nav-icon fas fa-edit"></i>
               <p>
                 Chi tiết cửa hàng
                 <i class="right fas fa-angle-left"></i>
@@ -138,7 +157,7 @@
 
           <li class="nav-item">
             <a href="" class="nav-link">
-            <i class="fas fa-long-arrow-alt-right"></i>
+              <i class="nav-icon fas fa-book"></i>
               <p>
                 Chi Tiết Sản Phẩm 
                 <i class="right fas fa-angle-left"></i>
@@ -163,7 +182,7 @@
 
           <li class="nav-item">
             <a href="" class="nav-link">
-            <i class="fas fa-long-arrow-alt-right"></i>
+              <i class="nav-icon far fa-plus-square"></i>
               <p>
                 Quản lý ảnh sản shẩm 
                 <i class="right fas fa-angle-left"></i>

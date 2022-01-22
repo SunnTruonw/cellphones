@@ -3,7 +3,6 @@
 
 namespace App\Helpers;
 
-use Illuminate\Support\Str;
 
 class Helper{
 
@@ -48,5 +47,50 @@ class Helper{
         if ($discount != 0) return number_format($discount);
         if ($price != 0)  return number_format($price);
         return '<a href="/lien-he.html">Liên Hệ</a>';
+    }
+
+    public static function categories($categories , $parent_id = 0)
+    {
+        $html = '';
+        foreach($categories as $key => $category)
+        {
+            if($category -> parent_id == $parent_id){
+                $html .='
+                    <ul>
+                        <li class="category-item has-child-cate">
+                            <a class="cate-link" href="/shop/' . \Str::slug($category->name, '-') . '">
+                            ' . $category->description . '
+                                <span>' . $category->name . '</span>
+                            </a>
+                            ';
+
+                        unset($categories[$key]);
+                        if (self::isChild($categories, $category->id)) {
+                            $html .= '<div class="main-nav-sub" >';
+                            $html .= self::categories($categories, $category->id);
+                            $html .= '</div>';
+                        
+                        }
+
+                    $html .= '</li></ul>
+                    ';
+            }
+        }
+      return $html;
+    }
+
+    
+
+
+    
+    public static function isChild($categories, $id)
+    {
+        foreach($categories as $category){
+            if($category->parent_id == $id){
+                return true;
+            }
+
+        }
+        return false;
     }
 }

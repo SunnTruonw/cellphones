@@ -18,6 +18,6 @@ class Store extends Model
 
     public function products()
     {
-        return $this->hasMany(Product::class , 'product_id' , 'id');
+        return $this->hasMany(Product::class , 'store_id' , 'id');
     }
 }

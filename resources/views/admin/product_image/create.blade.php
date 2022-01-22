@@ -4,7 +4,7 @@
 
 
 <div class="card-body">
-    <form action="{{route('product_image.store')}}" method="post">
+    <form action="{{route('product_image.store')}}" method="post" enctype="multipart/form-data">
     @csrf
     
     <div class="form-group">
@@ -17,13 +17,29 @@
         </select>
     </div>
 
-    <div class="form-group ">
-        <label for="menu">Ảnh sản phẩm</label>
-        <input type="file" class="form-control" id="upload">
-        <div id="image_show">
-            
+    <style>
+        .preview-images {
+            display: flex;
+            justify-content: flex-start;
+            gap: 5px
+        }
+        .preview-images img {
+            width: 150px;
+            height: 100px;
+        }
+    </style>
+    <div class="preview-images">
+
+    </div>
+    <div class="form-group">
+        <label for="exampleInputFile">Hình ảnh</label>
+        <div class="input-group">
+            <div class="custom-file">
+                <input type="file" name="path[]" multiple class="images-input custom-file-input"
+                       id="exampleInputFile">
+                <label class="custom-file-label" for="exampleInputFile">Choose Image</label>
+            </div>
         </div>
-        <input type="hidden" name="path" id="thumb">
     </div>
 
     
